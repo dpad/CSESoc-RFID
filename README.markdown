@@ -1,4 +1,4 @@
-Designed for use with RFIDv3 by Aaron Carroll, Dan Padilha, and Stephen Sherratt.
+Designed for use with RFIDv3 by Aaron Carroll, Dan Padilha, and Stephen Sherratt.  
 Contact Dan Padilha on <ddp@cse.unsw.edu.au> for more information.
 
 How it works
@@ -51,7 +51,7 @@ Flashing the Reader
 -------------------
 The RFIDv3 board is comprised of two main components: the MSP430F249 and the TRF7960.
 
-The MSP430 is the microcontroller and is what is programmed and flashed. rfidv3_msp.tar.gz is 
+The MSP430 is the microcontroller and is what is programmed and flashed. rfidv3\_msp.tar.gz is 
 the version of the code running on the RFID board itself, and also includes the entire
 revision history of the board's development.
 
@@ -65,7 +65,11 @@ Flashing the MSP, on the other hand, is a much more difficult process. You'll ne
 a compatible JTAG adapter, as well as a connector which can fit the header on the board
 (alternatively, solder your own!). There is a 6-pin JTAG header on the board (actually 8-pin, 
 but the 3V3 pin should be removed, and there is also a pin floating). Finally, you also need
-mspgcc-3.2.3.
+mspgcc-3.2.3. When all this is satisfied, flashing the board is as simple as running:
+
+    make && make program
+
+(on the rfidv3\_msp.tar.gz code obviously!)
 
 Also note: there are two jumpers on the board, which, when in use with the USB (which should
 be the only application at this point), should be set to "USB" and "3V3".
