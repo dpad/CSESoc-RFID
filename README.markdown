@@ -28,6 +28,7 @@ Reader Output
 Each line is either a "---" or "UID: abcdefabcd" (that is, the UID which is a 5-byte hex number).
 The "---" signifies one "round" of reading cards. This is because if there are two cards next to
 the reader, it'll essentially print out:
+
     ---
     UID: card1
     UID: card2
@@ -35,6 +36,7 @@ the reader, it'll essentially print out:
     UID: card2
     UID: card1
     ---
+
 etc.
 
 Also, I made the LEDs on the board flash on a good card read and on a bad checksum. It flashes 
