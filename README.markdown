@@ -5,10 +5,12 @@ How it works
 ------------
 
 You plug in the board with a USB->microUSB cable. As soon as it's plugged in it's working,
-so it'll be writing card IDs over the serial port. It writes to */dev/ttyUSB0* (or USBx, where x
-is normally 0 if you have no other serial USB devices running, which you shouldn't). You can
-watch the output live by using either minicom or picocom, as:
-*sudo picocom -b 115200 /dev/ttyUSB0*
+so it'll be writing card IDs over the serial port. It writes to **/dev/ttyUSB0** (or USBx, 
+where x is normally 0 if you have no other serial USB devices running, which you shouldn't). 
+You can watch the output live by using either minicom or picocom, as:
+
+    sudo picocom -b 115200 /dev/ttyUSB0
+
 The 115200 is the baud rate for the device, which is basically how quickly it talks over the
 serial port, it's practically equivalent to "frequency" for bits over a line. This value can be
 changed but is hardcoded into the board, so if you want to change it you'll need to reflash
